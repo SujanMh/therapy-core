@@ -1,0 +1,38 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended", "prettier"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 13,
+    "sourceType": "module"
+  },
+  "ignorePatterns": ["**/dist/**"],
+  "plugins": ["@typescript-eslint", "prettier", "license-header"],
+  "rules": {
+    // "license-header/header": ["error", "./LICENSE"],
+    "prettier/prettier": "error",
+    "no-prototype-builtins": "off",
+    "indent": ["error", 2],
+    "linebreak-style": "off",
+    "quotes": ["error", "single"],
+    "func-names": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "padding-line-between-statements": ["error", { "blankLine": "always", "prev": "function", "next": "*" }],
+    "newline-before-return": "error",
+    "no-console": "warn",
+    "@typescript-eslint/ban-types": [
+      "error",
+      {
+        "types": {
+          "{}": false,
+          "Function": false
+        },
+        "extendDefaults": true
+      }
+    ]
+  }
+}
